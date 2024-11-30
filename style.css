@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#todo-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+#todo-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+#add-todo-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    /* padding-left: 30px; */
+    border-bottom: 1px solid #ccc;
+}
+
+ul li {
+
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+/* 
+ul li::before {
+
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    border-radius: 50%;
+    background-image: url(https://w7.pngwing.com/pngs/764/21/png-transparent-ok-check-todo-agenda-icon-symbol-tick-to-do-gui-completed.png);
+    background-position: center;
+    background-size: contain;
+
+} */
+
+.checked {
+
+    text-decoration: line-through;
+    color: #5555;
+
+}
+
+
+
+ul li div {
+
+    display: flex;
+    gap: 30px;
+
+}
+
+ul li div i:nth-child(1){
+
+    color: red;
+    cursor: pointer;
+
+}
+
+ul li div i:nth-child(2){
+
+    color: blue;
+    cursor: pointer;
+
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.filters {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.filters button.active {
+    background-color: #3e8e41;
+}
+/* Responsive design */
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    #todo-input {
+        padding: 5px;
+    }
+    #add-todo-btn {
+        padding: 5px;
+    }
+}
+
