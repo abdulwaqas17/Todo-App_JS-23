@@ -12,18 +12,26 @@
     <div class="container">
         <h1>Todo App</h1>
         <form id="todo-form">
-            <input type="text" id="todo-input" placeholder="Add new todo">
+            <input type="text" id="todo-input" placeholder="Add new todo" maxlength="50">
             <button id="add-todo-btn" onclick="todoApp()" type="button">Add</button>
         </form>
         <ul id="todo-list">
             <!-- Todo items will be rendered here -->
         </ul>
+
+        
+        <ul id="filterUl" class="none">
+      
+        </ul>
+
         <div class="filters">
-            <button id="all-filter">All</button>
-            <button id="active-filter">Un Complete</button>
-            <button id="completed-filter">Completed</button>
+            <button id="all-filter" onclick="allwork()">All</button>
+            <button id="active-filter" onclick="uncompletedwork()">Un Complete</button>
+            <button id="completed-filter" onclick="completedwork()">Completed</button>
         </div>
     </div>
+
+    <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda eaque enim, quibusdam eius unde voluptatum nisi odit quis cumque saepe laborum soluta ad reiciendis accusantium sequi iusto ea consequuntur. Ipsum.</p> -->
 
     
 

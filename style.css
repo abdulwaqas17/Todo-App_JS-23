@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -26,6 +31,7 @@ h1 {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
+    outline: none;
 }
 
 #add-todo-btn {
@@ -41,11 +47,31 @@ h1 {
     list-style: none;
     padding: 0;
     margin: 0;
+    color: #111111;
+}
+
+#filterUl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #111111;
+}
+
+#filterUl li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    
+
+}
+
+.nowork {
+    text-align: center;
 }
 
 li {
     padding: 10px;
-    /* padding-left: 30px; */
+    padding-left: 30px;
     border-bottom: 1px solid #ccc;
 }
 
@@ -56,8 +82,21 @@ ul li {
     position: relative;
 
 }
-/* 
-ul li::before {
+
+.checkbutton {
+
+    width: 17px;
+    height: 17px;
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    cursor: pointer;
+
+}
+
+/* ul li::before {
 
     content: '';
     position: absolute;
@@ -67,18 +106,32 @@ ul li::before {
     height: 20px;
     border: 1px solid rgba(0, 0, 0, 0.384);
     border-radius: 50%;
-    background-image: url(https://w7.pngwing.com/pngs/764/21/png-transparent-ok-check-todo-agenda-icon-symbol-tick-to-do-gui-completed.png);
-    background-position: center;
+    /* background-image: url(https://w7.pngwing.com/pngs/764/21/png-transparent-ok-check-todo-agenda-icon-symbol-tick-to-do-gui-completed.png); */
+    /* background-position: center;
     background-size: contain;
 
-} */
+} */ 
 
 .checked {
 
-    text-decoration: line-through;
-    color: #5555;
+    
+    background-image: url(https://w7.pngwing.com/pngs/764/21/png-transparent-ok-check-todo-agenda-icon-symbol-tick-to-do-gui-completed.png);
+    background-size: contain;
+    cursor: pointer;
+   
 
 }
+
+.lineThrough {
+
+    text-decoration: line-through;
+    text-decoration-color: red;
+    color: #141414;
+    max-width: 320px;
+    /* text-decoration-style: ; */
+    
+}
+
 
 
 
@@ -93,6 +146,7 @@ ul li div i:nth-child(1){
 
     color: red;
     cursor: pointer;
+    text-decoration: none !important;
 
 }
 
@@ -100,6 +154,7 @@ ul li div i:nth-child(2){
 
     color: blue;
     cursor: pointer;
+    text-decoration: none !important;
 
 }
 
@@ -130,6 +185,33 @@ ul li div i:nth-child(2){
 .filters button.active {
     background-color: #3e8e41;
 }
+
+
+.show {
+    display: block;
+}
+
+
+.none {
+    display: none;
+}
+
+.pending {
+    color: rgb(250, 162, 0);
+    font-weight: bold;
+}
+
+.done{
+    color: rgb(0, 216, 0);
+    font-weight: bold;
+}
+
+
+
+
+
+
+
 /* Responsive design */
 
 @media (max-width: 768px) {
